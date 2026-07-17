@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-ink-50 text-ink-900 font-sans;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-signal-500 ring-offset-2 ring-offset-white;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ink-200 rounded-full;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    @apply bg-ink-600;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-3.5 py-2 text-sm font-medium transition-colors duration-150 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply btn bg-signal-500 text-white hover:bg-signal-600 shadow-card;
+  }
+  .btn-secondary {
+    @apply btn bg-white text-ink-700 border border-ink-100 hover:bg-ink-50 dark:bg-ink-800 dark:text-ink-100 dark:border-ink-600 dark:hover:bg-ink-700;
+  }
+  .btn-ghost {
+    @apply btn text-ink-500 hover:bg-ink-100 dark:text-ink-300 dark:hover:bg-ink-700;
+  }
+  .btn-danger {
+    @apply btn bg-priority-critical text-white hover:opacity-90;
+  }
+  .input {
+    @apply w-full rounded-lg border border-ink-100 bg-white px-3 py-2 text-sm text-ink-900 placeholder:text-ink-300 focus:border-signal-400 dark:bg-ink-800 dark:border-ink-600 dark:text-ink-50;
+  }
+  .card {
+    @apply rounded-card bg-white border border-ink-100 shadow-card dark:bg-ink-800 dark:border-ink-700;
+  }
+  .label {
+    @apply block text-xs font-medium text-ink-400 mb-1.5 uppercase tracking-wide;
+  }
+}

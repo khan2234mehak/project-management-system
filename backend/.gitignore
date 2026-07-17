@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+
+# SQLite database (auto-created by npm run migrate)
+database/pms.sqlite
+database/*.sqlite
+
+# Logs
+*.log
+npm-debug.log*
+
+# Uploaded files (local storage) — keep folder structure, ignore contents
+src/uploads/avatars/*
+src/uploads/attachments/*
+!src/uploads/avatars/.gitkeep
+!src/uploads/attachments/.gitkeep
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

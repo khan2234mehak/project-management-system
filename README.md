@@ -5,6 +5,7 @@ A full-stack project management platform (Jira/Trello/Asana-style) built with **
 This README covers setup, architecture, what's fully implemented, and what's intentionally scoped down from the original spec (and why).
 
 ---
+🌐 **[Live Demo](pulseboard-ten-khaki.vercel.app)**
 
 ## 1. Tech Stack
 
